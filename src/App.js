@@ -1,10 +1,10 @@
 import { Container, Row } from 'react-bootstrap';
 import NavBar from "./components/navbar/NavBar";
-import Home from "./pages/Home";
 import Movies from "./pages/Movies";
-import TVSeries from "./pages/TVSeries";
+import Watched from "./pages/Watched";
 import {ThemeProvider} from "./ThemeContext";
 import Favorites from "./pages/Favorites";
+
 
 import {
   BrowserRouter as Router,
@@ -15,16 +15,12 @@ import {
 const routes = [
   {
     path: '/',
-    component: <Home/>,
+    component: <Movies/>,
     exact: true,
   },
   {
-    path: '/movies',
-    component: <Movies/>,
-  },
-  {
-    path: 'tvseries',
-    component: <TVSeries/>,
+    path: 'watched',
+    component: <Watched/>,
   },
   {
     path: 'favorites',

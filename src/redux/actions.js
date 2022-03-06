@@ -37,6 +37,27 @@ export function setFavoriteMovies(movies) {
     }
 }
 
+export function addWatchedMovie(movie) {
+    return {
+        type: actionTypes.ADD_WATCHED_MOVIE,
+        payload: movie,
+    }
+}
+
+export function removeWatchedMovie(movie) {
+    return {
+        type: actionTypes.REMOVE_WATCHED_MOVIE,
+        payload: movie,
+    }
+}
+
+export function setWatchedMovies(movies) {
+    return {
+        type: actionTypes.SET_WATCHED_MOVIES,
+        payload: movies,
+    }
+}
+
 export function getMovies(path, params) {
     return async (dispatch) => {
         try {

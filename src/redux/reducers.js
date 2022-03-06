@@ -32,8 +32,22 @@ export function favoriteMovies(state = [], action) {
     }
 }
 
+export function watchedMovies(state = [], action) {
+    switch (action.type) {
+        case actionTypes.ADD_WATCHED_MOVIE:
+            return [...state, action.payload];
+        case actionTypes.REMOVE_WATCHED_MOVIE:
+            return state.filter(movie => action.payload.id !== movie.id);
+        case actionTypes.SET_WATCHED_MOVIES:
+            return [...action.payload];
+        default:
+            return state;
+    }
+}
+
 export default combineReducers({ 
     listView, 
     movies,
     favoriteMovies, 
+    watchedMovies,
 })

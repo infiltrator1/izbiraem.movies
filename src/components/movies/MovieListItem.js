@@ -1,6 +1,7 @@
 import moment from "moment";
 import constants from "../../constants";
 import FavoriteButton from "./FavoriteButton";
+import WatchedButton from "./WatchedButton";
 
 function MovieListItem({movie}) {
 
@@ -25,6 +26,7 @@ function MovieListItem({movie}) {
                         <span className="movie-vote badge rounded-pill bg-primary ms-auto">
                             {movie.vote_average}
                         </span>
+                        <WatchedButton movie={movie}/>
                         <FavoriteButton movie={movie}/>
                     </div>
                     <div className="movie-overview pt-3">

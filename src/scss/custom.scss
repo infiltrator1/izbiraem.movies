@@ -5,6 +5,14 @@
     }
 }
 
+.watched-icon {
+    color: $gray-400;
+    cursor: pointer;
+    &.active {
+        color:black;
+    }
+}
+
 .favorite-icon {
     color: $gray-400;
     cursor: pointer;

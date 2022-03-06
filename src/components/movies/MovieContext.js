@@ -19,6 +19,10 @@ export function MovieProvider(props) {
         new Array(4).fill(false)
     );
 
+    const [checkedState1, setCheckedState1] = useState(
+        new Array(3).fill(false)
+    );
+
     const [listView, setListView] = useState(true);
 
 
@@ -43,6 +47,8 @@ export function MovieProvider(props) {
                 setEndDate,
                 checkedState,
                 setCheckedState,
+                checkedState1,
+                setCheckedState1,
                 movies,
                 setMovies,
                 fetchMovies,

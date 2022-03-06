@@ -1,6 +1,7 @@
 import moment from "moment";
 import constants from "../../constants";
 import FavoriteButton from "./FavoriteButton";
+import WatchedButton from "./WatchedButton";
 
 function MovieGridItem({movie}) {
 
@@ -22,6 +23,7 @@ function MovieGridItem({movie}) {
                             <div className="movie-vote badge rounded-pill bg-primary">
                                 {movie.vote_average}
                             </div>
+                            <WatchedButton movie={movie}/>
                             <FavoriteButton movie={movie}/>
                             <div className="fw-bold movie-title py-1">{movie.title}</div>
                             <div className="movie-release-date">{getDate()}</div>
